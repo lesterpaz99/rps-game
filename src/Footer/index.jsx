@@ -4,9 +4,6 @@ import './Footer.css';
 const Footer = () => {
 	return (
 		<footer>
-			<div className='credits'>
-				<span>2022 - Obed Paz</span>
-			</div>
 			<div className='social-media'>
 				<span>Let's talk: </span>
 				<ul className='icon-list'>
