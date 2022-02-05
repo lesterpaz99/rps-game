@@ -1,0 +1,22 @@
+.ballon-container {
+	padding: 1rem;
+	animation: openBallon 0.6s ease-in-out;
+}
+
+.border-none {
+	border: none;
+}
+
+.btn-start {
+	margin-top: 2rem;
+	width: fit-content;
+}
+
+@keyframes openBallon {
+	0% {
+		transform: translateX(-100%);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
