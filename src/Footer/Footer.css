@@ -14,4 +14,5 @@ footer .social-media {
 .icon-list {
 	display: flex;
 	gap: 0.6rem;
+	list-style: none;
 }
