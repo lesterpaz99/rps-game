@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { useGame } from '../hooks/useGame';
 import {
 	FaRegHandRock,
@@ -6,8 +5,9 @@ import {
 	FaRegHandPaper,
 } from 'react-icons/fa';
 import './GameScreen.css';
+import { DialogWinner } from '../DialogWinner';
 
-const GameScreen = () => {
+const GameScreen = ({ handleStartGame }) => {
 	const {
 		round,
 		roundMessage,
@@ -19,6 +19,9 @@ const GameScreen = () => {
 
 	return (
 		<div className='game-wrapper'>
+			{winner && (
+				<DialogWinner winner={winner} handleStartGame={handleStartGame} />
+			)}
 			<h2 className='round-title'>Round {round}</h2>
 			<p className='info'>Make your choice:</p>
 			<ul className='choice-list'>
@@ -62,7 +65,6 @@ const GameScreen = () => {
 			<div>
 				<p>{roundMessage}</p>
 			</div>
-			{winner && `${winner} won the game! Congratulations!!!`}
 		</div>
 	);
 };
