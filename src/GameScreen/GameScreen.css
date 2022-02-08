@@ -1,11 +1,8 @@
 .game-wrapper {
-	max-width: 80%;
-	margin: 0 auto;
 	text-align: center;
 	padding: 2rem;
 	display: grid;
 	place-content: center;
-	transform: translateY(-80px);
 }
 
 .game-wrapper .info {
@@ -19,6 +16,7 @@
 
 .game-wrapper .choice-list {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
 	gap: 1rem;
 	list-style: none;
