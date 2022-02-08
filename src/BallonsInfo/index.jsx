@@ -11,7 +11,7 @@ const BallonsInfo = ({ handleStartGame }) => {
 						{/* Balloon */}
 						<div className='nes-balloon from-left'>
 							<p>Hello Player</p>
-							<p>Welcome to rps-game. The first to reach 5 points wins</p>
+							<p>Welcome to rps-game. The first to reach 5 stars wins</p>
 							<p>Press the START button bellow to start the game</p>
 						</div>
 					</div>
