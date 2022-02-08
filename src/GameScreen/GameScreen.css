@@ -1,0 +1,36 @@
+.game-wrapper {
+	max-width: 80%;
+	margin: 0 auto;
+	text-align: center;
+	padding: 2rem;
+	display: grid;
+	place-content: center;
+	transform: translateY(-80px);
+}
+
+.game-wrapper .info {
+	text-align: center;
+}
+
+.game-wrapper .round-title {
+	margin-bottom: 2rem;
+	text-align: center;
+}
+
+.game-wrapper .choice-list {
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
+	list-style: none;
+	padding: 0;
+}
+
+.details-section {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 6rem;
+}
+
+.details-section .score {
+	text-align: center;
+}
