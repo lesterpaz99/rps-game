@@ -1,0 +1,6 @@
+.stars-wrapper {
+	width: 100%;
+	display: grid;
+	place-content: center;
+	margin: 1rem 0;
+}
