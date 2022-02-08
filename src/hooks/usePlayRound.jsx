@@ -27,18 +27,21 @@ const usePlayRound = ({ playerSelection, computerSelection }) => {
 			(playerSelection === rock && computerSelection === scissors)
 		) {
 			setWinnerRound('player');
-			setRoundMessage(`You win! ${playerSelection} bits ${computerSelection}`);
+			setRoundMessage(
+				`You win! your ${playerSelection} bits computer's ${computerSelection}`
+			);
 		} else if (
 			(computerSelection === scissors && playerSelection === paper) ||
 			(computerSelection === paper && playerSelection === rock) ||
 			(computerSelection === rock && playerSelection === scissors)
 		) {
 			setWinnerRound('computer');
-			setRoundMessage(`You lost! ${computerSelection} bits ${playerSelection}`);
+			setRoundMessage(
+				`You lost! Computer's ${computerSelection} bits your ${playerSelection}`
+			);
 		}
 	}, [playerSelection, computerSelection]);
 
-	console.log(winnerRound, roundMessage);
 	return { winnerRound, roundMessage };
 };
 

@@ -1,0 +1,21 @@
+.winner-dialog {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: rgba(0 0 0 / 50%);
+	z-index: 1000;
+}
+
+.winner-dialog > section {
+	height: 100%;
+	width: 100%;
+	display: grid;
+	place-items: center;
+}
+
+.winner-dialog dialog {
+	display: block;
+	margin: 0 auto;
+}
