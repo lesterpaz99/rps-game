@@ -31,7 +31,7 @@ function App() {
 		<div className='App'>
 			<Header />
 			{startGame ? (
-				<GameScreen />
+				<GameScreen handleStartGame={handleStartGame} />
 			) : (
 				<BallonsInfo handleStartGame={handleStartGame} />
 			)}
