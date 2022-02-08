@@ -1,7 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
+import { globalContext } from './context/globalContext';
 import { Header } from './Header';
 import { Footer } from './Footer';
 import { Loader } from './Loader';
+import { GameScreen } from './GameScreen';
 import { BallonsInfo } from './BallonsInfo';
 import { useSound } from 'use-sound';
 import gameStartSound from './sounds/startGame.wav';
@@ -11,7 +13,8 @@ import './App.css';
 function App() {
 	const [loading, setLoading] = useState(true);
 	const [startGame, setStartGame] = useState(false);
-	const [playSound] = useSound(gameStartSound, { volume: 1 });
+	const { toggleVolume } = useContext(globalContext);
+	const [playSound] = useSound(gameStartSound, { volume: toggleVolume });
 
 	useEffect(() => {
 		setTimeout(() => setLoading(false), 3500);
@@ -28,7 +31,7 @@ function App() {
 		<div className='App'>
 			<Header />
 			{startGame ? (
-				<p>Your playing now</p>
+				<GameScreen />
 			) : (
 				<BallonsInfo handleStartGame={handleStartGame} />
 			)}
